@@ -1,0 +1,139 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800&display=swap");
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+    color: white;
+}
+
+$base-color: #2a3d66;
+$second-color: #5d54a4; 
+$third-color: #9d65c9;
+$text-color: #d789d7;
+
+
+.container{
+    width: 100%;
+    height: 100vh;
+    background-color: $base-color;
+
+    &::before{
+        content: '';
+        position: absolute;
+        width: 2000px;
+        height: 2000px;
+        top: -1000px;
+        right: -1100px;
+        border-radius: 50%;
+        background-color: $second-color;
+    }
+
+    .sign{
+        width: 100%; 
+        height: 450px;
+        display: relative;
+
+        &__in{
+            position: absolute;
+            top: 20%;
+            left: 20%;
+           width: 50%;
+           height: 450px;
+           max-width: 380px;
+           z-index: 10;
+        }
+
+        &__up{
+            position: absolute;
+            top: 120px;
+            left: 150px;
+            width: 50%;
+            height: 100%;
+            max-width: 380px;
+            opacity: 0;
+
+        }
+
+    }
+
+    .form{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+ 
+
+        &__field{
+            margin-top: 10px;
+            padding: 10px;
+            width: 100%;
+            display: grid;
+            grid-template-columns: 15% 85%;
+            border-radius: 51px;
+            border: none;
+            background-color: $second-color;
+        
+            input{
+                height: 35px;
+                background: none;
+                border: none;
+                outline: none;
+                color: $text-color;
+            }
+
+            ::placeholder{
+                color: $text-color; 
+            }
+
+            i{
+                line-height: 2;
+                text-align: center;
+            }
+        }
+
+        .btn{
+            text-transform: uppercase;
+            background-color: red;
+            padding: 15px;
+            width: 180px;
+            border-radius: 50px;
+            border: none;
+            background-color: $second-color;
+            margin: 50px 0 0 0;
+            transition:  .4s;
+            cursor: pointer;
+            
+        }
+
+        .btn:hover{
+            background-color: $third-color;
+        }
+    }
+
+    .social{
+        width: 100%;
+        display: flex;
+        justify-content: space-around;
+        margin: 30px 0;
+
+        a{
+            width: 48px;
+            height: 48px;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: $third-color;
+            text-decoration: none;
+            transition: .3s;
+        }
+
+        a:hover{
+            background-color: $second-color;
+        }
+
+    }
+    
+}
+
